@@ -333,7 +333,7 @@ syn match nsisFileKwd		contained "/\%(nonfatal\|[arx]\|oname\)\>"
 
 syn keyword nsisInstruction	contained ReserveFile nextgroup=nsisReserveFileOpt skipwhite
 syn region nsisReserveFileOpt	contained start="" end="$" transparent contains=@nsisAnyOpt,nsisReserveFileKwd
-syn match nsisReserveFileKwd	contained "/\%(nonfatal\|[arx]\)\>"
+syn match nsisReserveFileKwd	contained "/\%(nonfatal\|[rx]\|plugin\)\>"
 
 syn keyword nsisInstruction	contained RMDir nextgroup=nsisRMDirOpt skipwhite
 syn region nsisRMDirOpt		contained start="" end="$" transparent contains=@nsisAnyOpt,nsisRMDirKwd
