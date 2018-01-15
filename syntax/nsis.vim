@@ -103,12 +103,14 @@ syn match nsisGlobalLabel	contained "\.[^-+!$0-9;# \t/*][^ \t:;#]*:\ze\%($\|[ \t
 syn keyword nsisBoolean		contained true false
 syn keyword nsisOnOff		contained on off
 
-syn keyword nsisRegistry	contained HKCR HKLM HKCU HKU HKCC HKDD HKPD
-syn keyword nsisRegistry	contained HKCR32 HKCR64 HKLM32 HKLM64
+syn keyword nsisRegistry	contained HKCR HKLM HKCU HKU HKCC HKDD HKPD SHCTX
+syn keyword nsisRegistry	contained HKCR32 HKCR64 HKCU32 HKCU64 HKLM32 HKLM64
 syn keyword nsisRegistry	contained HKEY_CLASSES_ROOT HKEY_LOCAL_MACHINE HKEY_CURRENT_USER HKEY_USERS
 syn keyword nsisRegistry	contained HKEY_CLASSES_ROOT32 HKEY_CLASSES_ROOT64
+syn keyword nsisRegistry	contained HKEY_CURRENT_USER32 HKEY_CURRENT_USER64
 syn keyword nsisRegistry	contained HKEY_LOCAL_MACHINE32 HKEY_LOCAL_MACHINE64
 syn keyword nsisRegistry	contained HKEY_CURRENT_CONFIG HKEY_DYN_DATA HKEY_PERFORMANCE_DATA
+syn keyword nsisRegistry	contained SHELL_CONTEXT
 
 
 " common options
