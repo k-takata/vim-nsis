@@ -40,6 +40,11 @@ syn match nsisNumber		"\<[1-9]\d*\>"
 syn match nsisNumber		"\<0x\x\+\>"
 syn match nsisNumber		"\<0\o*\>"
 
+"STRING REPLACEMENT (5.4, 4.9.15.2, 5.3.1)
+syn region nsisPreprocSubst	start="\${" end="}" contains=nsisPreprocSubst,nsisPreprocLangStr,nsisPreprocEnvVar
+syn region nsisPreprocLangStr	start="\$(" end=")" contains=nsisPreprocSubst,nsisPreprocLangStr,nsisPreprocEnvVar
+syn region nsisPreprocEnvVar	start="\$%" end="%" contains=nsisPreprocSubst,nsisPreprocLangStr,nsisPreprocEnvVar
+
 "VARIABLES (4.2.2)
 syn match nsisUserVar		"$\d"
 syn match nsisUserVar		"$R\d"
@@ -545,10 +550,6 @@ syn region nsisVerboseOpt	contained start="" end="$" transparent keepend contain
 syn keyword nsisVerboseKwd	contained push pop
 
 "PREPROCESSOR (5.4)
-syn region nsisPreprocSubst	start="\${" end="}" contains=nsisPreprocSubst,nsisPreprocLangStr,nsisPreprocEnvVar
-syn region nsisPreprocLangStr	start="\$(" end=")" contains=nsisPreprocSubst,nsisPreprocLangStr,nsisPreprocEnvVar
-syn region nsisPreprocEnvVar	start="\$%" end="%" contains=nsisPreprocSubst,nsisPreprocLangStr,nsisPreprocEnvVar
-
 syn match nsisDefine		contained "!define\>" nextgroup=nsisDefineOpt skipwhite
 syn region nsisDefineOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisDefineKwd
 syn match nsisDefineKwd		contained "/\%(ifndef\|redef\|date\|utcdate\|math\|file\)\>"
