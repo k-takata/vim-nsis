@@ -176,9 +176,8 @@ syn match nsisStatement		"${OrIfNot}"
 syn match nsisStatement		"${OrUnless}"
 syn match nsisStatement		"${IfThen}"
 syn match nsisStatement		"${IfNotThen}"
-syn match nsisStatement		"${|}"
-syn match nsisStatement		"${IfCmd}"
-syn match nsisStatement		"${||}"
+syn match nsisStatement		"${||\?}" nextgroup=@nsisPseudoStatement skipwhite
+syn match nsisStatement		"${IfCmd}" nextgroup=@nsisPseudoStatement skipwhite
 syn match nsisStatement		"${Select}"
 syn match nsisStatement		"${Case}"
 syn match nsisStatement		"${Case[2-5]}"
