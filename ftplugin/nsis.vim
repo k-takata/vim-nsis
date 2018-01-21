@@ -3,7 +3,7 @@
 " Maintainer:		Ken Takata
 " URL:			https://github.com/k-takata/vim-nsis
 " Previous Maintainer:	Nikolai Weibull <now@bitwi.se>
-" Last Change:		2018-01-12
+" Last Change:		2018-01-21
 
 let s:cpo_save = &cpo
 set cpo&vim
