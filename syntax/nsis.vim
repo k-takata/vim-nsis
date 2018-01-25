@@ -3,12 +3,15 @@
 " Maintainer:		Ken Takata
 " URL:			https://github.com/k-takata/vim-nsis
 " Previous Maintainer:	Alex Jakushev <Alex.Jakushev@kemek.lt>
-" Last Change:		2018-01-21
+" Last Change:		2018-01-26
 
 " quit when a syntax file was already loaded
 if exists("b:current_syntax")
   finish
 endif
+
+let s:cpo_save = &cpo
+set cpo&vim
 
 syn case ignore
 
@@ -673,3 +676,5 @@ hi def link nsisSearchreplaceKwd	Constant
 
 let b:current_syntax = "nsis"
 
+let &cpo = s:cpo_save
+unlet s:cpo_save

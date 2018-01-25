@@ -3,14 +3,15 @@
 " Maintainer:		Ken Takata
 " URL:			https://github.com/k-takata/vim-nsis
 " Previous Maintainer:	Nikolai Weibull <now@bitwi.se>
-" Last Change:		2018-01-21
-
-let s:cpo_save = &cpo
-set cpo&vim
+" Last Change:		2018-01-26
 
 if exists("b:did_ftplugin")
   finish
 endif
+
+let s:cpo_save = &cpo
+set cpo&vim
+
 let b:did_ftplugin = 1
 
 let b:undo_ftplugin = "setl com< cms< fo< def< inc<"
