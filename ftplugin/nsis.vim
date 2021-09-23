@@ -15,7 +15,6 @@ set cpo&vim
 let b:did_ftplugin = 1
 
 let b:undo_ftplugin = "setl com< cms< fo< def< inc<"
-      \ " | unlet! b:match_ignorecase b:match_words"
 
 setlocal comments=s1:/*,mb:*,ex:*/,b:#,:; commentstring=;\ %s
 setlocal formatoptions-=t formatoptions+=croql
@@ -37,6 +36,7 @@ if exists("loaded_matchit")
 	\ '\${MementoSection}:\${MementoSectionEnd},' .
 	\ '!if\%(\%(macro\)\?n\?def\)\?\>:!else\>:!endif\>,' .
 	\ '!macro\>:!macroend\>'
+  let b:undo_ftplugin .= " | unlet! b:match_ignorecase b:match_words"
 endif
 
 let &cpo = s:cpo_save
