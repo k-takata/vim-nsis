@@ -3,7 +3,7 @@
 " Maintainer:		Ken Takata
 " URL:			https://github.com/k-takata/vim-nsis
 " Previous Maintainer:	Nikolai Weibull <now@bitwi.se>
-" Last Change:		2018-01-26
+" Last Change:		2021-10-18
 
 if exists("b:did_ftplugin")
   finish

@@ -2,7 +2,7 @@
 " Language:		NSIS script
 " Maintainer:		Ken Takata
 " URL:			https://github.com/k-takata/vim-nsis
-" Last Change:		2018-01-21
+" Last Change:		2021-10-18
 " Filenames:		*.nsi
 " License:		VIM License
 
