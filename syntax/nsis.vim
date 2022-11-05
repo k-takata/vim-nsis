@@ -3,7 +3,7 @@
 " Maintainer:		Ken Takata
 " URL:			https://github.com/k-takata/vim-nsis
 " Previous Maintainer:	Alex Jakushev <Alex.Jakushev@kemek.lt>
-" Last Change:		2020-10-18
+" Last Change:		2021-10-18
 
 " quit when a syntax file was already loaded
 if exists("b:current_syntax")
