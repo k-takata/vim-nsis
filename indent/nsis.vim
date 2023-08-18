@@ -2,7 +2,7 @@
 " Language:		NSIS script
 " Maintainer:		Ken Takata
 " URL:			https://github.com/k-takata/vim-nsis
-" Last Change:		2021-10-18
+" Last Change:		2023-08-18
 " Filenames:		*.nsi
 " License:		VIM License
 
@@ -15,7 +15,7 @@ setlocal nosmartindent
 setlocal noautoindent
 setlocal indentexpr=GetNsisIndent(v:lnum)
 setlocal indentkeys=!^F,o,O
-setlocal indentkeys+==~${Else,=~${EndIf,=~${EndUnless,=~${AndIf,=~${AndUnless,=~${OrIf,=~${OrUnless,=~${Case,=~${Default,=~${EndSelect,=~${EndSwith,=~${Loop,=~${Next,=~${MementoSectionEnd,=~FunctionEnd,=~SectionEnd,=~SectionGroupEnd,=~PageExEnd,0=~!macroend,0=~!if,0=~!else,0=~!endif
+setlocal indentkeys+==~${Else,=~${EndIf,=~${EndUnless,=~${AndIf,=~${AndUnless,=~${OrIf,=~${OrUnless,=~${Case,=~${Default,=~${EndSelect,=~${EndSwitch,=~${Loop,=~${Next,=~${MementoSectionEnd,=~FunctionEnd,=~SectionEnd,=~SectionGroupEnd,=~PageExEnd,0=~!macroend,0=~!if,0=~!else,0=~!endif
 
 let b:undo_indent = "setl ai< inde< indk< si<"
 
