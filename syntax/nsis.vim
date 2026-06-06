@@ -1,9 +1,9 @@
 " Vim syntax file
-" Language:		NSIS script, for version of NSIS 3.08 and later
+" Language:		NSIS script, for version of NSIS 3.12 and later
 " Maintainer:		Ken Takata
 " URL:			https://github.com/k-takata/vim-nsis
 " Previous Maintainer:	Alex Jakushev <Alex.Jakushev@kemek.lt>
-" Last Change:		2022-11-05
+" Last Change:		2026-06-06
 
 " quit when a syntax file was already loaded
 if exists("b:current_syntax")
