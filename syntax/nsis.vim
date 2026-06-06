@@ -408,7 +408,7 @@ syn region nsisSetRegViewOpt	contained start="" end="$" transparent keepend cont
 syn keyword nsisSetRegViewKwd	contained 32 64 default lastused
 
 "FUNCTIONS - general purpose (4.9.3)
-syn keyword nsisInstruction	contained CallInstDLL CreateDirectory GetWinVer
+syn keyword nsisInstruction	contained CallInstDLL CreateDirectory
 syn keyword nsisInstruction	contained GetFileTime GetFileTimeLocal GetKnownFolderPath
 syn keyword nsisInstruction	contained GetTempFileName ReadMemory SearchPath RegDLL UnRegDLL
 
@@ -507,8 +507,8 @@ syn keyword nsisInstruction	contained ShowWindow
 
 syn keyword nsisInstruction	contained CreateFont nextgroup=nsisFontOpt skipwhite
 
-syn keyword nsisInstruction	contained nextgroup=nsisBooleanOpt skipwhite
-			\ LockWindow SetAutoClose
+syn keyword nsisInstruction	contained SetAutoClose nextgroup=nsisBooleanOpt skipwhite
+syn keyword nsisInstruction	contained LockWindow nextgroup=nsisOnOffOpt skipwhite
 
 syn keyword nsisInstruction	contained LoadAndSetImage nextgroup=nsisLoadAndSetImageOpt skipwhite
 syn region nsisLoadAndSetImageOpt contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisLoadAndSetImageKwd
