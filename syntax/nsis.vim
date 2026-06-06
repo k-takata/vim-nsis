@@ -264,7 +264,7 @@ syn keyword nsisAttribute	contained InstallDirRegKey nextgroup=nsisRegistryOpt s
 
 syn keyword nsisAttribute	contained InstType nextgroup=nsisInstTypeOpt skipwhite
 syn region nsisInstTypeOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisInstTypeKwd
-syn match nsisInstTypeKwd	contained "/\%(NOCUSTOM\|CUSTOMSTRING\|COMPONENTSONLYONCUSTOM\)\>"
+syn match nsisInstTypeKwd	contained "/\%(NOCUSTOM\|CUSTOMSTRING\|COMPONENTSONLYONCUSTOM\|UNINSTNOCUSTOM\|UNINSTCOMPONENTSONLYONCUSTOM\)\>"
 
 syn keyword nsisAttribute	contained LicenseBkColor nextgroup=nsisLicenseBkColorOpt skipwhite
 syn region nsisLicenseBkColorOpt contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisLicenseBkColorKwd
@@ -371,7 +371,7 @@ syn keyword nsisInstruction	contained Exec ExecWait SetOutPath
 
 syn keyword nsisInstruction	contained ExecShell ExecShellWait nextgroup=nsisExecShellOpt skipwhite
 syn region nsisExecShellOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisExecShellKwd
-syn keyword nsisExecShellKwd	contained SW_SHOWDEFAULT SW_SHOWNORMAL SW_SHOWMAXIMIZED SW_SHOWMINIMIZED SW_HIDE
+syn keyword nsisExecShellKwd	contained SW_SHOW SW_SHOWDEFAULT SW_SHOWNORMAL SW_SHOWMAXIMIZED SW_SHOWMINIMIZED SW_HIDE
 syn match nsisExecShellKwd	contained "/INVOKEIDLIST\>"
 
 syn keyword nsisInstruction	contained File nextgroup=nsisFileOpt skipwhite
@@ -405,7 +405,7 @@ syn match nsisWriteRegMultiStrKwd  contained "/REGEDIT5\>"
 
 syn keyword nsisInstruction	contained SetRegView nextgroup=nsisSetRegViewOpt skipwhite
 syn region nsisSetRegViewOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisSetRegViewKwd
-syn keyword nsisSetRegViewKwd	contained default lastused
+syn keyword nsisSetRegViewKwd	contained 32 64 default lastused
 
 "FUNCTIONS - general purpose (4.9.3)
 syn keyword nsisInstruction	contained CallInstDLL CreateDirectory GetWinVer
@@ -476,7 +476,7 @@ syn keyword nsisInstruction	contained SetErrorLevel Sleep
 
 syn keyword nsisInstruction	contained SetShellVarContext nextgroup=nsisSetShellVarContextOpt skipwhite
 syn region nsisSetShellVarContextOpt  contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisSetShellVarContextKwd
-syn keyword nsisSetShellVarContextKwd contained current all
+syn keyword nsisSetShellVarContextKwd contained current all lastused
 
 "FUNCTIONS - String manipulation support (4.9.8)
 syn keyword nsisInstruction	contained StrCpy StrLen UnsafeStrCpy
@@ -575,7 +575,7 @@ syn match nsisSystem		contained "!addincludedir\>"
 
 syn match nsisSystem		contained "!addplugindir\>" nextgroup=nsisAddplugindirOpt skipwhite
 syn region nsisAddplugindirOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisAddplugindirKwd
-syn match nsisAddplugindirKwd	contained "/\%(x86-ansi\|x86-unicode\)\>"
+syn match nsisAddplugindirKwd	contained "/\%(x86-ansi\|x86-unicode\|target\)\>"
 
 syn match nsisSystem		contained "!appendfile\>" nextgroup=nsisAppendfileOpt skipwhite
 syn region nsisAppendfileOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisAppendfileKwd
