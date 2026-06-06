@@ -204,9 +204,16 @@ syn match nsisStatement		"${For}"
 syn match nsisStatement		"${ForEach}"
 syn match nsisStatement		"${ExitFor}"
 syn match nsisStatement		"${Next}"
+syn match nsisStatement		"${While}"
+syn match nsisStatement		"${ExitWhile}"
+syn match nsisStatement		"${EndWhile}"
 "STATEMENTS - Memento.nsh
 syn match nsisStatement		"${MementoSection}"
 syn match nsisStatement		"${MementoSectionEnd}"
+syn match nsisStatement		"${MementoUnselectedSection}"
+syn match nsisStatement		"${MementoSectionDone}"
+syn match nsisStatement		"${MementoSectionRestore}"
+syn match nsisStatement		"${MementoSectionSave}"
 
 
 "USER VARIABLES (4.2.1)
