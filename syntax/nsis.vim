@@ -443,7 +443,7 @@ syn keyword nsisFileAttrib	contained FILE_ATTRIBUTE_TEMPORARY
 syn keyword nsisInstruction	contained Abort Call ClearErrors GetCurrentAddress
 syn keyword nsisInstruction	contained GetFunctionAddress GetLabelAddress Goto
 syn keyword nsisInstruction	contained IfAbort IfErrors IfFileExists IfRebootFlag IfSilent
-syn keyword nsisInstruction	contained IfAltRegView IfShellVarContextAll IfRtlLanguage
+syn keyword nsisInstruction	contained IfAltRegView IfRtlLanguage IfShellVarContextAll
 syn keyword nsisInstruction	contained IntCmp IntCmpU Int64Cmp Int64CmpU IntPtrCmp IntPtrCmpU
 syn keyword nsisInstruction	contained Return Quit SetErrors StrCmp StrCmpS
 
@@ -575,7 +575,7 @@ syn match nsisSystem		contained "!addincludedir\>"
 
 syn match nsisSystem		contained "!addplugindir\>" nextgroup=nsisAddplugindirOpt skipwhite
 syn region nsisAddplugindirOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisAddplugindirKwd
-syn match nsisAddplugindirKwd	contained "/\%(x86-ansi\|x86-unicode\|target\)\>"
+syn match nsisAddplugindirKwd	contained "/\%(x86-ansi\|x86-unicode\\)\>"
 
 syn match nsisSystem		contained "!appendfile\>" nextgroup=nsisAppendfileOpt skipwhite
 syn region nsisAppendfileOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisAppendfileKwd
