@@ -575,7 +575,7 @@ syn match nsisSystem		contained "!addincludedir\>"
 
 syn match nsisSystem		contained "!addplugindir\>" nextgroup=nsisAddplugindirOpt skipwhite
 syn region nsisAddplugindirOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisAddplugindirKwd
-syn match nsisAddplugindirKwd	contained "/\%(x86-ansi\|x86-unicode\\)\>"
+syn match nsisAddplugindirKwd	contained "/\%(x86-ansi\|x86-unicode\)\>"
 
 syn match nsisSystem		contained "!appendfile\>" nextgroup=nsisAppendfileOpt skipwhite
 syn region nsisAppendfileOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisAppendfileKwd
