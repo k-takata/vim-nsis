@@ -370,7 +370,7 @@ syn match nsisDeleteKwd		contained "/REBOOTOK\>"
 syn keyword nsisInstruction	contained Exec ExecWait SetOutPath
 
 syn keyword nsisInstruction	contained ExecShell ExecShellWait nextgroup=nsisExecShellOpt skipwhite
-syn region nsisExecShellOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisExecShellKwd
+syn region nsisExecShellOpt	contained start="" end="$" transparent contains=@nsisAnyOpt,nsisExecShellKwd
 syn keyword nsisExecShellKwd	contained SW_SHOW SW_SHOWDEFAULT SW_SHOWNORMAL SW_SHOWMAXIMIZED SW_SHOWMINIMIZED SW_HIDE
 syn match nsisExecShellKwd	contained "/INVOKEIDLIST\>"
 
@@ -448,7 +448,7 @@ syn keyword nsisInstruction	contained IntCmp IntCmpU Int64Cmp Int64CmpU IntPtrCm
 syn keyword nsisInstruction	contained Return Quit SetErrors StrCmp StrCmpS
 
 syn keyword nsisInstruction	contained MessageBox nextgroup=nsisMessageBoxOpt skipwhite
-syn region nsisMessageBoxOpt	contained start="" end="$" transparent keepend contains=@nsisAnyOpt,nsisMessageBox
+syn region nsisMessageBoxOpt	contained start="" end="$" transparent contains=@nsisAnyOpt,nsisMessageBox
 syn keyword nsisMessageBox	contained MB_OK MB_OKCANCEL MB_ABORTRETRYIGNORE MB_RETRYCANCEL MB_YESNO MB_YESNOCANCEL
 syn keyword nsisMessageBox	contained MB_ICONEXCLAMATION MB_ICONINFORMATION MB_ICONQUESTION MB_ICONSTOP MB_USERICON
 syn keyword nsisMessageBox	contained MB_TOPMOST MB_SETFOREGROUND MB_RIGHT MB_RTLREADING
